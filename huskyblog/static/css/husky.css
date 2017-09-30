@@ -1,0 +1,29 @@
+.page-kube {
+  border-top: 4px solid #0d0d0e; }
+
+a {
+  color: #0d0d0e;
+  text-decoration: none; }
+
+#top {
+  display: flex;
+  align-items: center;
+  padding: 0 36px;
+  height: 56px;
+  border-bottom: 1px solid #e0e1e1; }
+  #top > #top-brand > a > #icon {
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/logo.png");
+    background-size: 40px;
+    background-repeat: no-repeat; }
+  #top > #top-brand-main {
+    margin-left: auto; }
+    #top > #top-brand-main > ul {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0; }
+      #top > #top-brand-main > ul > li {
+        padding-left: 50px; }
+
+/*# sourceMappingURL=husky.css.map */
