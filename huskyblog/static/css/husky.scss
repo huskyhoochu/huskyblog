@@ -1,0 +1,19 @@
+@import "../bulma/sass/utilities/initial-variables";
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700');
+$logo-size: 30px;
+
+.logo-img {
+  background-size: $logo-size;
+  background-image: url('../images/logo.png');
+  background-repeat: no-repeat;
+  width: $logo-size;
+  height: $logo-size;
+  box-sizing: content-box;
+  padding-right: 15px;
+  border-right: 1px solid $grey;
+}
+
+.logo-title.is-size-3 {
+  padding-left: 15px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}

@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700");
+.logo-img {
+  background-size: 30px;
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  box-sizing: content-box;
+  padding-right: 15px;
+  border-right: 1px solid #7a7a7a; }
 
+.logo-title.is-size-3 {
+  padding-left: 15px;
+  font-family: 'Yanone Kaffeesatz', sans-serif; }
 
 /*# sourceMappingURL=husky.css.map */

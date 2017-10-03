@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AACQ,4EAAoE;AAG5E,SAAU;EACR,eAAe,EAHL,IAAI;EAId,gBAAgB,EAAE,yBAAyB;EAC3C,iBAAiB,EAAE,SAAS;EAC5B,KAAK,EANK,IAAI;EAOd,MAAM,EAPI,IAAI;EAQd,UAAU,EAAE,WAAW;EACvB,aAAa,EAAE,IAAI;EACnB,YAAY,EAAE,iBAAe;;AAG/B,qBAAsB;EACpB,YAAY,EAAE,IAAI;EAClB,WAAW,EAAE,+BAA+B",
+"sources": ["husky.scss"],
 "names": [],
 "file": "husky.css"
 }
