@@ -1,4 +1,5 @@
-$('#arch-dropdown').on('open.dropdown', function()
-{
-    // do something...
-});
+$(document).ready(function () {
+    $('.burger').click(function () {
+        $('.navbar-menu').toggleClass('active')
+    })
+})
