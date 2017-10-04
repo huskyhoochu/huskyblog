@@ -13,7 +13,8 @@
     <title>Huskyhoochu</title>
 </head>
 <body>
-<div class="container">
+<!--헤더-->
+<header class="container">
     <!--내비게이션 바-->
     <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
         <!--내비게이션 로고-->
@@ -58,6 +59,12 @@
             </div>
         </div>
     </nav>
-</div>
+
+</header>
+<!--본문-->
+<section class="container">
+{% block content %}
+{% endblock %}
+</section>
 </body>
 </html>

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!--메인 포스트 목록-->
+    <div class="columns">
+    <div class="column is-half">
+        <div class="box">
+            <figure class="image is-4by3">
+                <img src="http://bulma.io/images/placeholders/640x480.png" alt="">
+            </figure>
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <header><h3><strong>{{ posts.first.title }}</strong></h3></header>
+                        <p>{{ posts.first.content|linebreaksbr|truncatewords:30 }}</p>
+                        <p>{{ posts.first.published_date }}</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div class="columns is-multiline">
+        {% for post in posts %}
+            <div class="column is-6">
+                <div class="box">
+                    <figure class="image is-4by3">
+                        <img src="http://bulma.io/images/placeholders/640x480.png" alt="">
+                    </figure>
+                    <article class="media">
+                        <div class="media-content">
+                            <div class="content">
+                                <header><h3><strong>{{ post.title }}</strong></h3></header>
+                                <p>{{ post.content|linebreaksbr|truncatewords:30 }}</p>
+                                <p>{{ post.published_date }}</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+{% endblock %}

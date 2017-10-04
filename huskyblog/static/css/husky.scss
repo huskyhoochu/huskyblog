@@ -1,5 +1,6 @@
 @import "../bulma/sass/utilities/initial-variables";
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
 $logo-size: 30px;
 
 .logo-img {
@@ -10,7 +11,7 @@ $logo-size: 30px;
   height: $logo-size;
   box-sizing: content-box;
   padding-right: 15px;
-  border-right: 1px solid $grey;
+  border-right: 1px solid $grey-light;
 }
 
 .logo-title.is-size-3 {
@@ -26,4 +27,12 @@ $logo-size: 30px;
 
 .active {
   display: block !important;
+}
+
+.navbar-item {
+  font-family: 'Raleway', sans-serif;
+}
+
+a.navbar-item:hover {
+  background-color: white;
 }

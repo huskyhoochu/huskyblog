@@ -5,9 +5,9 @@ from blog.models import Post
 
 
 def post_list(request):
-    posts = Post.objects.all()
+    posts = Post.objects.order_by('-published_date')
     context = {
         'posts' : posts
     }
     # return render(request, 'blog/post_list.html', context)
-    return render(request, 'base.html')
+    return render(request, 'blog/post_list.html', context)
