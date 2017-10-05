@@ -70,4 +70,12 @@
   margin-top: 30px;
   margin-bottom: 50px; }
 
+#page-prv, #page-next, #not_current {
+  color: #4a4a4a; }
+
+#is_current {
+  background-color: #ffdd57;
+  border-color: #ffdd57;
+  color: white; }
+
 /*# sourceMappingURL=husky.css.map */

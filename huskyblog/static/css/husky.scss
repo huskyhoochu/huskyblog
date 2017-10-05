@@ -14,6 +14,8 @@ $opacity: rgba(255,255,255,0.7);
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+
+
 // header
 
 // main navigation
@@ -108,7 +110,21 @@ $opacity: rgba(255,255,255,0.7);
   padding: 12px;
 }
 
+
+// pagination
 #paginator {
   margin-top: 30px;
   margin-bottom: 50px;
 }
+
+#page-prv, #page-next, #not_current {
+  color: $grey-dark;
+}
+
+#is_current {
+  background-color: $yellow;
+  border-color: $yellow;
+  color: white;
+}
+
+// 4.
