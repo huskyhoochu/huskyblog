@@ -2,14 +2,34 @@
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300');
 $logo-size: 30px;
-
+$opacity: rgba(255,255,255,0.3);
 
 #main-nav {
+  border-bottom: 1px solid $grey-light;
+  background-color: $opacity;
   top: 0;
-  left: 10%;
-  border-bottom: 1px solid $white-ter;
-  position: fixed;
+  position: sticky;
+  z-index: 2;
+  > header.container {
+    background-color: $opacity;
+    > nav.navbar {
+      background-color: $opacity;
+    }
+  }
 }
+
+#main-nav:before {
+  content: '';
+  position: absolute;
+  top: 0; left:0; right:0; bottom:0;
+  background: inherit;
+  z-index:-1;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  -moz-filter: blur(6px);
+  -o-filter: blur(6px);
+}
+
 
 .logo-img {
   background-size: $logo-size;
@@ -47,7 +67,8 @@ a.navbar-item:hover {
 
 #main-content {
   position: relative;
-  top: 100px;
+  top: 50px;
+  z-index: 1;
 }
 
 .image {

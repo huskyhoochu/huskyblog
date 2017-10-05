@@ -1,10 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300");
 #main-nav {
+  border-bottom: 1px solid #b5b5b5;
+  background-color: rgba(255, 255, 255, 0.3);
   top: 0;
-  left: 10%;
-  border-bottom: 1px solid whitesmoke;
-  position: fixed; }
+  position: sticky;
+  z-index: 2; }
+  #main-nav > header.container {
+    background-color: rgba(255, 255, 255, 0.3); }
+    #main-nav > header.container > nav.navbar {
+      background-color: rgba(255, 255, 255, 0.3); }
+
+#main-nav:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  z-index: -1;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  -moz-filter: blur(6px);
+  -o-filter: blur(6px); }
 
 .logo-img {
   background-size: 30px;
@@ -35,7 +54,8 @@ a.navbar-item:hover {
 
 #main-content {
   position: relative;
-  top: 100px; }
+  top: 50px;
+  z-index: 1; }
 
 .image {
   margin-bottom: 15px; }
