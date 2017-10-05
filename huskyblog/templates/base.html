@@ -14,57 +14,60 @@
 </head>
 <body>
 <!--헤더-->
-<header class="container">
-    <!--내비게이션 바-->
-    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-        <!--내비게이션 로고-->
-        <div class="navbar-brand">
-            <a href="{% url "post_list" %}" class="navbar-item">
-                <div class="logo-img"></div>
-                <div class="logo-title is-size-3">
-                    HUSKY HOOCHU
-                </div>
-            </a>
-            <!--햄버거 버튼-->
-            <div class="navbar-burger burger" data-target="navMenuTransparent">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <!--반응형 메뉴-->
-        <div id="navMenuTransparent" class="navbar-menu">
-            <div class="navbar-end">
-                <a href="" class="navbar-item">
-                    About
-                </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        Archive
-                    </a>
-                    <div class="navbar-dropdown is-boxed">
-                        <a href="" class="navbar-item">
-                            Essay
-                        </a>
-                        <a href="" class="navbar-item">
-                            Book Review
-                        </a>
-                        <hr class="dropdown-divider">
-                        <a href="" class="navbar-item">
-                            programming
-                        </a>
+<div class="container-fluid" id="main-nav">
+    <header class="container">
+        <!--내비게이션 바-->
+        <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+            <!--내비게이션 로고-->
+            <div class="navbar-brand">
+                <a href="{% url "post_list" %}" class="navbar-item">
+                    <div class="logo-img"></div>
+                    <div class="logo-title is-size-3">
+                        HUSKY HOOCHU
                     </div>
+                </a>
+                <!--햄버거 버튼-->
+                <div class="navbar-burger burger" data-target="navMenuTransparent">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <a href="" class="navbar-item">Contact</a>
             </div>
-        </div>
-    </nav>
+            <!--반응형 메뉴-->
+            <div id="navMenuTransparent" class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="" class="navbar-item">
+                        About
+                    </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Archive
+                        </a>
+                        <div class="navbar-dropdown is-boxed">
+                            <a href="" class="navbar-item">
+                                Essay
+                            </a>
+                            <a href="" class="navbar-item">
+                                Book Review
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="" class="navbar-item">
+                                programming
+                            </a>
+                        </div>
+                    </div>
+                    <a href="" class="navbar-item">Contact</a>
+                </div>
+            </div>
+        </nav>
 
-</header>
+    </header>
+</div>
 <!--본문-->
-<section class="container">
-{% block content %}
-{% endblock %}
+<section class="container" id="main-content">
+    {% block content %}
+    {% endblock %}
 </section>
+
 </body>
 </html>

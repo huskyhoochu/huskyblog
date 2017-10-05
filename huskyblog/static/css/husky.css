@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300");
+#main-nav {
+  top: 0;
+  left: 10%;
+  border-bottom: 1px solid whitesmoke;
+  position: fixed; }
+
 .logo-img {
   background-size: 30px;
   background-image: url("../images/logo.png");
@@ -26,5 +32,15 @@
 
 a.navbar-item:hover {
   background-color: white; }
+
+#main-content {
+  position: relative;
+  top: 100px; }
+
+.image {
+  margin-bottom: 15px; }
+
+.is-multiline {
+  padding: 12px; }
 
 /*# sourceMappingURL=husky.css.map */

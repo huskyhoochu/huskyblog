@@ -3,6 +3,14 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300');
 $logo-size: 30px;
 
+
+#main-nav {
+  top: 0;
+  left: 10%;
+  border-bottom: 1px solid $white-ter;
+  position: fixed;
+}
+
 .logo-img {
   background-size: $logo-size;
   background-image: url('../images/logo.png');
@@ -35,4 +43,17 @@ $logo-size: 30px;
 
 a.navbar-item:hover {
   background-color: white;
+}
+
+#main-content {
+  position: relative;
+  top: 100px;
+}
+
+.image {
+  margin-bottom: 15px;
+}
+
+.is-multiline {
+  padding: 12px
 }
