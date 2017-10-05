@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 $logo-size: 30px;
-$opacity: rgba(255,255,255,0.5);
+$opacity: rgba(255,255,255,0.7);
 
 
 //global
@@ -20,9 +20,9 @@ $opacity: rgba(255,255,255,0.5);
   position: sticky;
   z-index: 2;
   > header.container {
-    background-color: $opacity;
+    background-color: rgba(0,0,0,0);
     > nav.navbar {
-      background-color: $opacity;
+      background-color: rgba(0,0,0,0);
     }
   }
 }
