@@ -46,12 +46,9 @@
 .image {
   margin-bottom: 17px; }
 
-#primary-column {
-  padding-top: 0; }
-
 #right-column {
   margin: 0 !important;
-  padding: 0 12px 12px 12px; }
+  padding: 12px; }
 
 #all-post-button {
   margin: 0 auto;
