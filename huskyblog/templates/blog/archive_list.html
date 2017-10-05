@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!--전체 포스트 목록-->
+    <div class="columns is-multiline">
+        {% for post in posts %}
+            <div class="column is-8 is-offset-2">
+                <a href="">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-128x128">
+                                    <img src="http://bulma.io/images/placeholders/480x480.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <header><h1 class="has-text-weight-bold">{{ post.title }}</h1></header>
+                                <p>{{ posts.first.content|linebreaksbr|truncatewords:30 }}</p>
+                                <p class="has-text-right">{{ posts.first.published_date }}</p>
+                            </div>
+                        </article>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+        <div class="column is-8 is-offset-2">
+            <nav>
+                <ul class="pager">
+                    {% if posts.has_previous %}
+                        <li class="align-left"><a href="?page={{ posts.previous_page_number }}">previous</a></li>
+                    {% endif %}
+                    <li>
+                        <span>{{ posts.number }}</span>
+                    </li>
+                    {% if posts.has_next %}
+                        <li class="align-rightl"><a href="?page={{ posts.next_page_number }}">next</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                <a class="pagination-previous">Previous</a>
+                <a class="pagination-next">Next page</a>
+                <ul class="pagination-list">
+                    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>
+                    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+                    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+                    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>
+                    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </section>
+{% endblock %}

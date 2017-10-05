@@ -2,13 +2,14 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 .body {
-  font-family: 'Raleway', 'Noto Sans KR', sans-serif; }
+  font-family: 'Noto Sans KR', sans-serif; }
 
 #main-nav {
   background-color: rgba(255, 255, 255, 0.7);
   top: 0;
   position: sticky;
-  z-index: 2; }
+  z-index: 2;
+  margin-bottom: 50px; }
   #main-nav > header.container {
     background-color: rgba(0, 0, 0, 0); }
     #main-nav > header.container > nav.navbar {
@@ -40,7 +41,6 @@
 
 #main-content {
   position: relative;
-  top: 50px;
   z-index: 1; }
 
 .image {
@@ -50,11 +50,17 @@
   margin: 0 !important;
   padding: 12px; }
 
+#tile-article {
+  line-height: 1.5; }
+
+#tile-divider {
+  background-color: #4a4a4a; }
+
+#tile-subtitle {
+  margin-bottom: 10px; }
+
 #all-post-button {
   margin: 0 auto;
   display: block; }
-
-.hero {
-  margin-top: 80px; }
 
 /*# sourceMappingURL=husky.css.map */

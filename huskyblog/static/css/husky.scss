@@ -6,19 +6,23 @@ $logo-size: 30px;
 $opacity: rgba(255,255,255,0.7);
 
 
+// 1. base
+
 //global
 
 .body {
-  font-family: 'Raleway', 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 // header
 
+// main navigation
 #main-nav {
   background-color: $opacity;
   top: 0;
   position: sticky;
   z-index: 2;
+  margin-bottom: 50px;
   > header.container {
     background-color: rgba(0,0,0,0);
     > nav.navbar {
@@ -43,12 +47,14 @@ $opacity: rgba(255,255,255,0.7);
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
+// hamburger button
 .burger {
   margin: 8px 16px 8px 16px;
   box-sizing: content-box;
 
 }
 
+// jquery active
 .active {
   display: block !important;
 }
@@ -57,11 +63,13 @@ $opacity: rgba(255,255,255,0.7);
   font-family: 'Raleway', sans-serif;
 }
 
+
+// 2. index
+
 // content
 
 #main-content {
   position: relative;
-  top: 50px;
   z-index: 1;
 }
 
@@ -69,21 +77,29 @@ $opacity: rgba(255,255,255,0.7);
   margin-bottom: 17px;
 }
 
-#primary-column {
-}
-
 #right-column {
   margin: 0 !important;
   padding: 12px;
 }
 
+// tile
+#tile-article {
+  line-height: 1.5;
+}
+
+#tile-divider {
+  background-color: $grey-dark;
+}
+
+#tile-subtitle {
+  margin-bottom: 10px;
+}
+
+// post button
 #all-post-button {
   margin: 0 auto;
   display: block;
 }
 
-// hero
 
-.hero {
-  margin-top: 80px;
-}
+// 3. essay_list
