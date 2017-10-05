@@ -5,15 +5,14 @@
   font-family: 'Raleway', 'Noto Sans KR', sans-serif; }
 
 #main-nav {
-  border-bottom: 1px solid #b5b5b5;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
   top: 0;
   position: sticky;
   z-index: 2; }
   #main-nav > header.container {
-    background-color: rgba(255, 255, 255, 0.3); }
+    background-color: rgba(255, 255, 255, 0.5); }
     #main-nav > header.container > nav.navbar {
-      background-color: rgba(255, 255, 255, 0.3); }
+      background-color: rgba(255, 255, 255, 0.5); }
 
 .logo-img {
   background-size: 30px;
@@ -47,7 +46,17 @@
 .image {
   margin-bottom: 17px; }
 
-.is-multiline {
-  padding: 12px; }
+#primary-column {
+  padding-top: 0; }
+
+#right-column {
+  padding-top: 12px; }
+
+#all-post-button {
+  margin: 0 auto;
+  display: block; }
+
+.hero {
+  margin-top: 80px; }
 
 /*# sourceMappingURL=husky.css.map */
