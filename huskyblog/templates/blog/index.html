@@ -15,7 +15,7 @@
                                 <div class="content">
                                     <header><h1 class="has-text-weight-bold">{{ posts.first.title }}</h1></header>
                                     <p>{{ posts.first.content|linebreaksbr|truncatewords:30 }}</p>
-                                    <p>{{ posts.first.published_date }}</p>
+                                    <p class="has-text-right">{{ posts.first.published_date }}</p>
                                 </div>
                             </div>
                         </article>
@@ -52,7 +52,7 @@
                                     <div class="content">
                                         <header><h3 class="has-text-weight-semibold">{{ post.title }}</h3></header>
                                         <p>{{ post.content|linebreaksbr|truncatewords:20 }}</p>
-                                        <p>
+                                        <p class="has-text-right">
                                             <small>{{ post.published_date }}</small>
                                         </p>
                                     </div>
