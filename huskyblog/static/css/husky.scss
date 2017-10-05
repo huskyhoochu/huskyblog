@@ -1,8 +1,18 @@
 @import "../bulma/sass/utilities/initial-variables";
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700');
-@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 $logo-size: 30px;
 $opacity: rgba(255,255,255,0.3);
+
+
+//global
+
+.body {
+  font-family: 'Raleway', 'Noto Sans KR', sans-serif;
+}
+
+// header
 
 #main-nav {
   border-bottom: 1px solid $grey-light;
@@ -17,19 +27,6 @@ $opacity: rgba(255,255,255,0.3);
     }
   }
 }
-
-#main-nav:before {
-  content: '';
-  position: absolute;
-  top: 0; left:0; right:0; bottom:0;
-  background: inherit;
-  z-index:-1;
-  filter: blur(6px);
-  -webkit-filter: blur(6px);
-  -moz-filter: blur(6px);
-  -o-filter: blur(6px);
-}
-
 
 .logo-img {
   background-size: $logo-size;
@@ -61,9 +58,7 @@ $opacity: rgba(255,255,255,0.3);
   font-family: 'Raleway', sans-serif;
 }
 
-a.navbar-item:hover {
-  background-color: white;
-}
+// content
 
 #main-content {
   position: relative;
@@ -72,7 +67,7 @@ a.navbar-item:hover {
 }
 
 .image {
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .is-multiline {
