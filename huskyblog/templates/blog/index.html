@@ -6,7 +6,7 @@
     <!--좌측 최신글 컬럼-->
         <div class="column is-6 is-multiline" id="primary-column">
             <div class="column is-12">
-                <a href="">
+                <a href="{% url 'post_detail' pk=posts.first.pk %}">
                     <div class="box">
                         <figure class="image is-4by3">
                             <img src="http://bulma.io/images/placeholders/640x480.png" alt="">
@@ -45,7 +45,7 @@
             <!--for loop에 슬라이스 기능 사용-->
             {% for post in posts|slice:"1:5" %}
                 <div class="column is-6">
-                    <a href="">
+                    <a href="{% url 'post_detail' pk=post.pk %}">
                         <div class="box">
                             <figure class="image is-4by3">
                                 <img src="http://bulma.io/images/placeholders/640x480.png" alt="">

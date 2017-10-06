@@ -78,3 +78,10 @@ def programming_list(request):
         posts = paginator.page(paginator.num_pages)
 
     return render(request, 'blog/category_list.html', {'posts': posts})
+
+def post_detail(request, pk):
+    post = Post.objects.get(pk=pk)
+    context = {
+        'post': post
+    }
+    return render(request, 'blog/post_detail.html', context)
