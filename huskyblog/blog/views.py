@@ -35,7 +35,7 @@ def essay_list(request):
     """
     카테고리: 에세이 리스트 페이지
     """
-    essay_list = Post.objects.filter(category__exact='1')
+    essay_list = Post.objects.filter(category__exact='1').order_by('-published_date')
     paginator = Paginator(essay_list, 2)
     page = request.GET.get('page')
     try:

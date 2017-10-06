@@ -15,7 +15,6 @@ $opacity: rgba(255,255,255,0.7);
 }
 
 
-
 // header
 
 // main navigation
@@ -129,4 +128,8 @@ $opacity: rgba(255,255,255,0.7);
   color: white;
 }
 
-// 4.
+// 4. category_list (essay, review, programming)
+
+#category-name {
+  padding: 12px;
+}
