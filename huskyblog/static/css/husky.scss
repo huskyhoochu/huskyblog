@@ -91,6 +91,7 @@ $opacity: rgba(255,255,255,0.7);
 
 #tile-divider {
   background-color: $grey-dark;
+  border: 1px solid;
 }
 
 #tile-subtitle {
@@ -107,12 +108,13 @@ $opacity: rgba(255,255,255,0.7);
 // 3.archive_list
 
 #archive-column {
-  padding: 12px;
+  padding: 24px;
 }
 
 
 // pagination
 #paginator {
+  padding: 24px;
   margin-top: 30px;
   margin-bottom: 50px;
 }

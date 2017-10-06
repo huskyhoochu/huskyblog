@@ -3,6 +3,7 @@
 {% block content %}
     <!--메인 포스트 목록-->
     <div class="columns">
+    <!--좌측 최신글 컬럼-->
         <div class="column is-6 is-multiline" id="primary-column">
             <div class="column is-12">
                 <a href="">
@@ -13,7 +14,7 @@
                         <article class="media">
                             <div class="media-content">
                                 <div class="content">
-                                    <header><h1 class="has-text-weight-bold">{{ posts.first.title }}</h1></header>
+                                    <header><h1 class="title has-text-weight-bold is-size-1-desktop is-size-3-mobile">{{ posts.first.title }}</h1></header>
                                     <p>{{ posts.first.content|linebreaksbr|truncatewords:30 }}</p>
                                     <p class="has-text-right">{{ posts.first.published_date }}</p>
                                 </div>
@@ -22,15 +23,16 @@
                     </div>
                 </a>
             </div>
+            <!--메시지 타일-->
             <div class="column is-12">
                 <div class="tile is-ancestor">
                     <div class="tile is-parent">
                         <article class="tile is-child notification is-warning">
-                            <p class="title" id="tile-article">
+                            <p class="title is-size-3-desktop is-size-4-mobile" id="tile-article">
                                 <em>"장은 어리석은 질문이야말로 유일하게 가치 있는 질문이라고 믿었다. 어리석은 질문에는 답이 없거나 틀린 답만이 존재할 뿐이며, 이로써 질문은 질문이 아닌 의지가 되기 때문이라고 말했다."</em>
                             </p>
                             <hr id="tile-divider">
-                            <p class="subtitle has-text-right" id="tile-subtitle">
+                            <p class="subtitle has-text-right is-size-5-desktop is-size-6-mobile" id="tile-subtitle">
                                 -정지돈, 『눈먼 부엉이』
                             </p>
                         </article>
@@ -38,6 +40,7 @@
                 </div>
             </div>
         </div>
+    <!--우측 최신글 컬럼-->
         <div class="columns is-6 is-multiline" id="right-column">
             <!--for loop에 슬라이스 기능 사용-->
             {% for post in posts|slice:"1:5" %}
@@ -50,7 +53,7 @@
                             <article class="media">
                                 <div class="media-content">
                                     <div class="content">
-                                        <header><h3 class="has-text-weight-semibold">{{ post.title }}</h3></header>
+                                        <header><h3 class="has-text-weight-semibold is-size-4">{{ post.title }}</h3></header>
                                         <p>{{ post.content|linebreaksbr|truncatewords:20 }}</p>
                                         <p class="has-text-right">
                                             <small>{{ post.published_date }}</small>
