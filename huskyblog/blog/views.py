@@ -46,3 +46,19 @@ def essay_list(request):
         posts = paginator.page(paginator.num_pages)
 
     return render(request, 'blog/essay_list.html', {'posts': posts})
+
+def review_list(request):
+    """
+    카테고리: 리뷰 리스트 페이지
+    """
+    review_list = Post.objects.filter(category__exact='2')
+    paginator = Paginator(review_list, 2)
+    page = request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
+
+    return render(request, 'blog/review_list.html', {'posts': posts})
