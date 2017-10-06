@@ -16,12 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from blog.views import index, archive_list, essay_list, review_list
+from blog.views import index, archive_list, essay_list, review_list, programming_list
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
     url(r'^archive/$', archive_list, name='archive_list'),
     url(r'^archive/essay/$', essay_list, name='essay_list'),
-    url(r'^archive/review/$', review_list, name='review_list')
+    url(r'^archive/review/$', review_list, name='review_list'),
+    url(r'^archive/programming/$', programming_list, name='programming_list')
 ]

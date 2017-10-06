@@ -1,7 +1,0 @@
-{% extends 'base_list.html' %}
-
-{% block archive %}
-    {% for i in posts|slice:"0:1" %}
-        <h1 class="title has-text-weight-bold" id="category-name">카테고리: <span class="title has-text-weight-normal">{{ i.category }}</span></h1>
-    {% endfor %}
-{% endblock %}

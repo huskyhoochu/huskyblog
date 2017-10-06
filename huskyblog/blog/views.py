@@ -45,7 +45,7 @@ def essay_list(request):
     except EmptyPage:
         posts = paginator.page(paginator.num_pages)
 
-    return render(request, 'blog/essay_list.html', {'posts': posts})
+    return render(request, 'blog/category_list.html', {'posts': posts})
 
 def review_list(request):
     """
@@ -61,4 +61,20 @@ def review_list(request):
     except EmptyPage:
         posts = paginator.page(paginator.num_pages)
 
-    return render(request, 'blog/review_list.html', {'posts': posts})
+    return render(request, 'blog/category_list.html', {'posts': posts})
+
+def programming_list(request):
+    """
+    카테고리: 프로그래밍 리스트 페이지
+    """
+    programming_list = Post.objects.filter(category__exact='3')
+    paginator = Paginator(programming_list, 2)
+    page = request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
+
+    return render(request, 'blog/category_list.html', {'posts': posts})
