@@ -10,3 +10,17 @@ $(document).ready(function () {
         $('.navbar-menu').toggleClass('active')
     })
 })
+
+//타일 박스 애니메이션
+
+$(window).ready(function () {
+    $('#tile-box').hide()
+})
+
+$(window).scroll(function(){
+	if($(window).scrollTop() > 300){
+		$('#tile-box').fadeIn('1000');
+	}else if($(window).scrollTop() < 300){
+		$('#tile-box').fadeOut('1000');
+	}
+});
