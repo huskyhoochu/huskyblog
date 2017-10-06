@@ -15,6 +15,18 @@ class Post(models.Model):
     content = models.TextField(blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(blank=True, null=True)
+    category = models.ForeignKey('blog.Category', blank=True, null=True)
+
+    def __str__(self):
+        return self.title
+
+
+class Category(models.Model):
+    """
+    Category 모델을 정의한다
+    1. 제목 (title)
+    """
+    title = models.CharField(max_length=50)
 
     def __str__(self):
         return self.title
