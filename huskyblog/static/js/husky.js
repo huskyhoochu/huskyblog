@@ -24,3 +24,12 @@ $(window).scroll(function(){
 		$('#tile-box').fadeOut('1000');
 	}
 });
+
+// 마크다운 적용
+$(document).ready(function () {
+    $('#post-article').each(function () {
+        var content = $('#post-article').text();
+        var markedContent = marked(content);
+        $(this).html(markedContent)
+    })
+});

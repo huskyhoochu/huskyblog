@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
 $logo-size: 30px;
 $opacity: rgba(255,255,255,0.7);
 
@@ -72,10 +75,6 @@ $opacity: rgba(255,255,255,0.7);
 #main-content {
   position: relative;
   z-index: 1;
-}
-
-.image {
-  margin-bottom: 17px;
 }
 
 #right-column {
