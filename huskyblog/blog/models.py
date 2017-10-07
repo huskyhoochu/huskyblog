@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+
 from markdownx.models import MarkdownxField
 
 
@@ -16,10 +17,8 @@ class Post(models.Model):
     category = models.ForeignKey('blog.Category', blank=True, null=True)
     title = models.CharField(max_length=100)
     content = models.TextField(blank=True)
-    markdown = MarkdownxField()
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(blank=True, null=True)
-
 
     def __str__(self):
         return self.title

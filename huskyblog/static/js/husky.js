@@ -9,7 +9,7 @@ $(document).ready(function () {
     $('.burger').click(function () {
         $('.navbar-menu').toggleClass('active')
     })
-})
+});
 
 //타일 박스 애니메이션
 
