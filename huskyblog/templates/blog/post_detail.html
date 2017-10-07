@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <!--이미지가 존재할 때만 컬럼 생성-->
+    {% if image != None %}
     <div class="columns">
         <div class="column is-6 is-offset-3">
             <figure class="image is-square">
@@ -8,6 +10,7 @@
             </figure>
         </div>
     </div>
+    {% endif %}
     <div class="columns">
         <div class="column is-8 is-offset-2" id="archive-column">
             <h1 class="title is-spaced is-size-2 has-text-weight-bold">{{ post.title }}</h1>

@@ -83,9 +83,15 @@ def programming_list(request):
 
 def post_detail(request, pk):
     post = Post.objects.get(pk=pk)
-    image = Image.objects.get(post__id=post.pk)
-    context = {
-        'post': post,
-        'image': image,
-    }
+    # 이미지 객체를 가져오려고 시도한다
+    # 이미지 객체가 없다면 None 값을 주고 절차를 진행한다
+    try:
+        image = Image.objects.get(post__id=post.pk)
+    except:
+        image = None
+    finally:
+        context = {
+            'post': post,
+            'image': image,
+        }
     return render(request, 'blog/post_detail.html', context)
