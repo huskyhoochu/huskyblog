@@ -5,7 +5,7 @@ from markdownx.widgets import AdminMarkdownxWidget
 
 from blog.models import Post, Category, Image
 
-
+# markdownx 구현을 위한 admin 세팅
 class PostAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.TextField: {'widget': AdminMarkdownxWidget}
