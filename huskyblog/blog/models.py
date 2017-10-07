@@ -34,6 +34,7 @@ class Category(models.Model):
 class Image(models.Model):
     """
     이미지 업로드
+    related_name으로 역참조 키워드를 붙인다
     """
     post = models.ForeignKey(Post, related_name='posts')
     title = models.CharField(max_length=100)
