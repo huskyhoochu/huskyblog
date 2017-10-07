@@ -17,7 +17,7 @@
                             <div class="media-content">
                                 <div class="content">
                                     <header><h1 class="title has-text-weight-bold is-size-1-desktop is-size-3-mobile">{{ posts.first.title }}</h1></header>
-                                    <p>{{ posts.first.content|linebreaksbr|truncatewords:30 }}</p>
+                                    <p>{{ posts.first.markdown|linebreaksbr|truncatewords:30 }}</p>
                                     <div class="level is-mobile">
                                         <span class="level-left"><strong>{{ posts.first.category }}</strong></span>
                                         <span class="level-right">{{ posts.first.published_date|date:"Y/m/d" }}</span>

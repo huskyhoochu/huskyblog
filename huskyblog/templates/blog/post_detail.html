@@ -14,7 +14,7 @@
     <div class="columns">
         <div class="column is-8 is-offset-2" id="archive-column">
             <h1 class="title is-spaced is-size-2 has-text-weight-bold">{{ post.title }}</h1>
-            <article class="has-text-weight-normal" id="post-article">{{ post.content|linebreaksbr }}</article>
+            <article class="has-text-weight-normal" id="post-article">{{ post.markdown|linebreaksbr }}</article>
             <h3 class="subtitle is-size-6 has-text-weight-light has-text-right" id="post-published">{{ post.published_date }} <span class="has-text-weight-semibold">| published</span></h3>
         </div>
     </div>

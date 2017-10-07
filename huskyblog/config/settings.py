@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Third-party applications
     'django_extensions',
+    'markdownx',
     # User applications
     'blog',
 ]
@@ -126,6 +127,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # User staticfiles directory
+# STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     STATIC_DIR,
