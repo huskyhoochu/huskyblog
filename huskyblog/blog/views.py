@@ -2,7 +2,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from blog.models import Post
+from blog.models import Post, Image
 
 
 def index(request):
@@ -10,8 +10,10 @@ def index(request):
     메인 페이지를
     """
     posts = Post.objects.order_by('-published_date')
+    images = Image.objects.order_by('-post')
     context = {
-        'posts': posts
+        'posts': posts,
+        'images': images,
     }
     return render(request, 'blog/index.html', context)
 
@@ -81,7 +83,9 @@ def programming_list(request):
 
 def post_detail(request, pk):
     post = Post.objects.get(pk=pk)
+    image = Image.objects.get(post__id=post.pk)
     context = {
-        'post': post
+        'post': post,
+        'image': image,
     }
     return render(request, 'blog/post_detail.html', context)

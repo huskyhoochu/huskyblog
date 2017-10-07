@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+
     <!--메인 포스트 목록-->
     <div class="columns">
-    <!--좌측 최신글 컬럼-->
+        <!--좌측 최신글 컬럼-->
         <div class="column is-6 is-multiline" id="primary-column">
             <div class="column is-12">
                 <a href="{% url 'post_detail' pk=posts.first.pk %}">
                     <div class="box">
-                        <figure class="image is-4by3">
-                            <img src="http://bulma.io/images/placeholders/640x480.png" alt="">
+                        <figure class="image is-square">
+                            <img src="/media/{{ images.first.cover_image }}" alt="">
                         </figure>
                         <article class="media">
                             <div class="media-content">
@@ -40,15 +42,15 @@
                 </div>
             </div>
         </div>
-    <!--우측 최신글 컬럼-->
+        <!--우측 최신글 컬럼-->
         <div class="columns is-6 is-multiline" id="right-column">
             <!--for loop에 슬라이스 기능 사용-->
             {% for post in posts|slice:"1:5" %}
                 <div class="column is-6">
                     <a href="{% url 'post_detail' pk=post.pk %}">
                         <div class="box">
-                            <figure class="image is-4by3">
-                                <img src="http://bulma.io/images/placeholders/640x480.png" alt="">
+                            <figure class="image is-square">
+                                    <img src="/media/{{ post.posts.first.cover_image }}" alt="">
                             </figure>
                             <article class="media">
                                 <div class="media-content">

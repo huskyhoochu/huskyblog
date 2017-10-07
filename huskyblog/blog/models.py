@@ -30,3 +30,15 @@ class Category(models.Model):
 
     def __str__(self):
         return self.title
+
+class Image(models.Model):
+    """
+    이미지 업로드
+    """
+    post = models.ForeignKey(Post, related_name='posts')
+    title = models.CharField(max_length=100)
+    cover_image = models.ImageField(blank=True, null=True, upload_to='./covers/%Y/%m')
+
+    def __str__(self):
+        return self.title
+
