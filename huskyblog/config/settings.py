@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     # Third-party applications
     'django_extensions',
     'markdownx',
-    'markdown_deux',
     # User applications
     'blog',
 ]

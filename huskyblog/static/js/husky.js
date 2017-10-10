@@ -15,7 +15,7 @@ $(document).ready(function () {
 
 $(window).ready(function () {
     $('#tile-box').hide()
-})
+});
 
 $(window).scroll(function(){
 	if($(window).scrollTop() > 300){
@@ -32,4 +32,11 @@ $(document).ready(function () {
         var markedContent = marked(content);
         $(this).html(markedContent)
     })
+});
+
+//highlights.js
+$(document).ready(function() {
+    $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
 });
